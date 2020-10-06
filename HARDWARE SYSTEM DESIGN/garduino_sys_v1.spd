@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_irq_mapper.vho"
+   type="VHDL"
+   library="irq_mapper" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/mentor/altera_merlin_width_adapter.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="width_adapter"
+   simulator="modelsim" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/mentor/altera_merlin_address_alignment.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="width_adapter"
+   simulator="modelsim" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/mentor/altera_merlin_burst_uncompressor.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="width_adapter"
+   simulator="modelsim" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/aldec/altera_merlin_width_adapter.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="width_adapter"
+   simulator="riviera" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/aldec/altera_merlin_address_alignment.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="width_adapter"
+   simulator="riviera" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/aldec/altera_merlin_burst_uncompressor.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="width_adapter"
+   simulator="riviera" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_rsp_xbar_mux_001.vho"
+   type="VHDL"
+   library="rsp_xbar_mux_001" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_rsp_xbar_mux.vho"
+   type="VHDL"
+   library="rsp_xbar_mux" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_rsp_xbar_demux_003.vho"
+   type="VHDL"
+   library="rsp_xbar_demux_003" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_rsp_xbar_demux.vho"
+   type="VHDL"
+   library="rsp_xbar_demux" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_cmd_xbar_mux.vho"
+   type="VHDL"
+   library="cmd_xbar_mux" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_cmd_xbar_demux_001.vho"
+   type="VHDL"
+   library="cmd_xbar_demux_001" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_cmd_xbar_demux.vho"
+   type="VHDL"
+   library="cmd_xbar_demux" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/mentor/altera_reset_controller.v"
+   type="VERILOG_ENCRYPT"
+   library="rst_controller"
+   simulator="modelsim" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/mentor/altera_reset_synchronizer.v"
+   type="VERILOG_ENCRYPT"
+   library="rst_controller"
+   simulator="modelsim" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/aldec/altera_reset_controller.v"
+   type="VERILOG_ENCRYPT"
+   library="rst_controller"
+   simulator="riviera" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/aldec/altera_reset_synchronizer.v"
+   type="VERILOG_ENCRYPT"
+   library="rst_controller"
+   simulator="riviera" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/mentor/altera_merlin_burst_adapter.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="burst_adapter"
+   simulator="modelsim" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/mentor/altera_merlin_address_alignment.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="burst_adapter"
+   simulator="modelsim" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/aldec/altera_merlin_burst_adapter.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="burst_adapter"
+   simulator="riviera" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/aldec/altera_merlin_address_alignment.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="burst_adapter"
+   simulator="riviera" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_id_router_003.vho"
+   type="VHDL"
+   library="id_router_003" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_id_router_002.vho"
+   type="VHDL"
+   library="id_router_002" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_id_router.vho"
+   type="VHDL"
+   library="id_router" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_addr_router_001.vho"
+   type="VHDL"
+   library="addr_router_001" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_addr_router.vho"
+   type="VHDL"
+   library="addr_router" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_sdram_controller_s1_translator_avalon_universal_slave_0_agent_rdata_fifo.vho"
+   type="VHDL"
+   library="sdram_controller_s1_translator_avalon_universal_slave_0_agent_rdata_fifo" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_sdram_controller_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"
+   type="VHDL"
+   library="sdram_controller_s1_translator_avalon_universal_slave_0_agent_rsp_fifo" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_sys_cpu_v1_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"
+   type="VHDL"
+   library="sys_cpu_v1_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/mentor/altera_merlin_slave_agent.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="sys_cpu_v1_jtag_debug_module_translator_avalon_universal_slave_0_agent"
+   simulator="modelsim" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/mentor/altera_merlin_burst_uncompressor.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="sys_cpu_v1_jtag_debug_module_translator_avalon_universal_slave_0_agent"
+   simulator="modelsim" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/aldec/altera_merlin_slave_agent.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="sys_cpu_v1_jtag_debug_module_translator_avalon_universal_slave_0_agent"
+   simulator="riviera" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/aldec/altera_merlin_burst_uncompressor.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="sys_cpu_v1_jtag_debug_module_translator_avalon_universal_slave_0_agent"
+   simulator="riviera" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/mentor/altera_merlin_master_agent.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="sys_cpu_v1_instruction_master_translator_avalon_universal_master_0_agent"
+   simulator="modelsim" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/aldec/altera_merlin_master_agent.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="sys_cpu_v1_instruction_master_translator_avalon_universal_master_0_agent"
+   simulator="riviera" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/mentor/altera_merlin_slave_translator.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="sys_cpu_v1_jtag_debug_module_translator"
+   simulator="modelsim" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/aldec/altera_merlin_slave_translator.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="sys_cpu_v1_jtag_debug_module_translator"
+   simulator="riviera" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/mentor/altera_merlin_master_translator.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="sys_cpu_v1_instruction_master_translator"
+   simulator="modelsim" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/aldec/altera_merlin_master_translator.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="sys_cpu_v1_instruction_master_translator"
+   simulator="riviera" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_Curtains.vhd"
+   type="VHDL"
+   library="Curtains" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_Roof.vhd"
+   type="VHDL"
+   library="Roof" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_Lights.vhd"
+   type="VHDL"
+   library="Lights" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_soil_rain_solar_data.vhd"
+   type="VHDL"
+   library="soil_rain_solar_data" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_tem_and_humidity_data.vhd"
+   type="VHDL"
+   library="tem_and_humidity_data" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_sysid.vho"
+   type="VHDL"
+   library="sysid" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_bluetooth_uart.vhd"
+   type="VHDL"
+   library="bluetooth_uart" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_jtag_uart.vhd"
+   type="VHDL"
+   library="jtag_uart" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_sdram_controller.vhd"
+   type="VHDL"
+   library="sdram_controller" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_onchip_memory2.hex"
+   type="HEX"
+   library="onchip_memory2" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_onchip_memory2.vhd"
+   type="VHDL"
+   library="onchip_memory2" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_sys_clk.vhd"
+   type="VHDL"
+   library="sys_clk" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_sys_cpu_v1.sdc"
+   type="SDC"
+   library="sys_cpu_v1" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_sys_cpu_v1.vhd"
+   type="VHDL"
+   library="sys_cpu_v1" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_sys_cpu_v1_jtag_debug_module_sysclk.vhd"
+   type="VHDL"
+   library="sys_cpu_v1" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_sys_cpu_v1_jtag_debug_module_tck.vhd"
+   type="VHDL"
+   library="sys_cpu_v1" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_sys_cpu_v1_jtag_debug_module_wrapper.vhd"
+   type="VHDL"
+   library="sys_cpu_v1" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_sys_cpu_v1_nios2_waves.do"
+   type="OTHER"
+   library="sys_cpu_v1" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_sys_cpu_v1_ociram_default_contents.dat"
+   type="DAT"
+   library="sys_cpu_v1" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_sys_cpu_v1_ociram_default_contents.hex"
+   type="HEX"
+   library="sys_cpu_v1" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_sys_cpu_v1_ociram_default_contents.mif"
+   type="MIF"
+   library="sys_cpu_v1" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_sys_cpu_v1_oci_test_bench.vhd"
+   type="VHDL"
+   library="sys_cpu_v1" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_sys_cpu_v1_rf_ram_a.dat"
+   type="DAT"
+   library="sys_cpu_v1" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_sys_cpu_v1_rf_ram_a.hex"
+   type="HEX"
+   library="sys_cpu_v1" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_sys_cpu_v1_rf_ram_a.mif"
+   type="MIF"
+   library="sys_cpu_v1" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_sys_cpu_v1_rf_ram_b.dat"
+   type="DAT"
+   library="sys_cpu_v1" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_sys_cpu_v1_rf_ram_b.hex"
+   type="HEX"
+   library="sys_cpu_v1" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_sys_cpu_v1_rf_ram_b.mif"
+   type="MIF"
+   library="sys_cpu_v1" />
+ <file
+   path="garduino_sys_v1/simulation/submodules/garduino_sys_v1_sys_cpu_v1_test_bench.vhd"
+   type="VHDL"
+   library="sys_cpu_v1" />
+ <file path="garduino_sys_v1/simulation/garduino_sys_v1.vhd" type="VHDL" />
+ <file
+   path="garduino_sys_v1/simulation/garduino_sys_v1_sys_cpu_v1_jtag_debug_module_translator_avalon_universal_slave_0_agent.vhd"
+   type="VHDL" />
+ <file
+   path="garduino_sys_v1/simulation/garduino_sys_v1_sdram_controller_s1_translator_avalon_universal_slave_0_agent.vhd"
+   type="VHDL" />
+ <file
+   path="garduino_sys_v1/simulation/garduino_sys_v1_width_adapter.vhd"
+   type="VHDL" />
+ <file
+   path="garduino_sys_v1/simulation/garduino_sys_v1_width_adapter_001.vhd"
+   type="VHDL" />
+ <file
+   path="garduino_sys_v1/simulation/garduino_sys_v1_sys_cpu_v1_instruction_master_translator.vhd"
+   type="VHDL" />
+ <file
+   path="garduino_sys_v1/simulation/garduino_sys_v1_sys_cpu_v1_data_master_translator.vhd"
+   type="VHDL" />
+ <file
+   path="garduino_sys_v1/simulation/garduino_sys_v1_sys_cpu_v1_jtag_debug_module_translator.vhd"
+   type="VHDL" />
+ <file
+   path="garduino_sys_v1/simulation/garduino_sys_v1_onchip_memory2_s1_translator.vhd"
+   type="VHDL" />
+ <file
+   path="garduino_sys_v1/simulation/garduino_sys_v1_sdram_controller_s1_translator.vhd"
+   type="VHDL" />
+ <file
+   path="garduino_sys_v1/simulation/garduino_sys_v1_jtag_uart_avalon_jtag_slave_translator.vhd"
+   type="VHDL" />
+ <file
+   path="garduino_sys_v1/simulation/garduino_sys_v1_bluetooth_uart_s1_translator.vhd"
+   type="VHDL" />
+ <file
+   path="garduino_sys_v1/simulation/garduino_sys_v1_sysid_control_slave_translator.vhd"
+   type="VHDL" />
+ <file
+   path="garduino_sys_v1/simulation/garduino_sys_v1_tem_and_humidity_data_s1_translator.vhd"
+   type="VHDL" />
+ <file
+   path="garduino_sys_v1/simulation/garduino_sys_v1_lights_s1_translator.vhd"
+   type="VHDL" />
+ <file
+   path="garduino_sys_v1/simulation/garduino_sys_v1_rst_controller.vhd"
+   type="VHDL" />
+ <file
+   path="garduino_sys_v1/simulation/garduino_sys_v1_rst_controller_001.vhd"
+   type="VHDL" />
+ <topLevel name="garduino_sys_v1" />
+ <deviceFamily name="cycloneii" />
+ <modelMap
+   controllerPath="garduino_sys_v1.onchip_memory2"
+   modelPath="garduino_sys_v1.onchip_memory2" />
+</simPackage>

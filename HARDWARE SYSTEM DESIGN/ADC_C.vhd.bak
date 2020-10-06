@@ -1,0 +1,128 @@
+Library IEEE;
+use IEEE.std_logic_1164.all;
+
+Entity ADC_C is
+	port(
+   RST       : in std_logic;
+	CLK_in 	 : in std_logic;
+	EOC_in 	 : in std_logic;
+	Start  	 : out std_logic;
+	DATA_in 	 : in std_logic_vector(7 downto 0);
+	CLK_out 	 : out std_logic;
+	POT1_DATA : out std_logic_vector(7 downto 0);
+	POT2_DATA : out std_logic_vector(7 downto 0);
+	POT3_DATA : out std_logic_vector(7 downto 0);
+	LDR_DATA  : out std_logic_vector(7 downto 0);
+	Add       : out std_logic_vector(1 downto 0);
+	
+	leds      : out std_logic_vector(7 downto 0);
+	ledg      : out std_logic_vector(3 downto 0));
+	
+end ADC_C;
+
+Architecture Behavioral of ADC_C is
+
+type data_pack is array (3 downto 0) of std_logic_vector(7 downto 0);
+type address is array (3 downto 0) of std_logic_vector(1 downto 0);
+type state_type is(reset , start_conv ,converting, end_conv) ;
+
+signal da : data_pack := ("00000000","00000000","00000000","00000000") ;
+signal addr : address := ("11","10","01","00") ;
+signal state : state_type;
+
+signal counter       : integer := 1;
+signal del, index    : integer range  0 to 3 ;
+signal clk_slow      : std_logic :='0';
+signal str           : std_logic ;
+signal edge_det      : std_logic_vector(2 downto 0);
+signal  eoc_falling_edge, eoc_rising_edge : boolean ;
+
+
+
+begin
+
+ clk_divider : process(RST, CLK_in)
+	            begin
+						if RST = '1' then
+							counter <= 0;
+							clk_slow <= '0' ;
+						elsif rising_edge(CLK_in) then
+							counter <= counter + 1 ;
+							if (counter = 60 ) then 
+								clk_slow <= not (clk_slow) ;
+								counter <= 1 ;
+							end if ;
+						end if;
+ end process clk_divider;
+	
+	
+ adc_contr : process (RST, EOC_in,clk_slow)
+				 begin 
+					 if(RST ='1') then 
+						da    <= ("00000000","00000000","00000000","00000000");
+						Add   <= "00";
+						str   <= '0' ;
+						index <= 0 ;
+						state <= reset ;
+						ledg  <= "0000" ;
+					elsif rising_edge( clk_slow ) then 
+							case state is 
+								  when reset => 
+										 da <=("00000000","00000000","00000000","00000000");
+										 Add <= addr(index);
+										 str <= '0' ;
+							          state <= start_conv ;
+					    				 ledg <= "0001" ;
+										 del <= 3 ;
+									when start_conv =>
+										 str <='1';
+										 if(del <= 0) then 
+											state <= converting ;
+											ledg <= "0010" ;
+										 else 
+											del <= del - 1 ; 
+										 end if ;
+									when converting => 
+										 str <= '0' ; 
+										 state <= end_conv ;
+										 ledg <= "0100" ;
+									when end_conv =>
+										 if(eoc_rising_edge) then 
+											da(index) <= DATA_in ;
+											state <= reset ;
+											ledg <= "1000" ;
+							  
+							            if ( index >= 2 ) then 
+												index <= 0 ;
+											else index <= index + 1 ;
+											end if ;
+										 else
+											state <= end_conv ;
+										 end if ;
+						end case;	    	  				  
+					end if ;
+ end process adc_contr ;
+	
+	
+ eoc_edge_det : process (clk_slow )
+					 begin 
+						 if rising_edge(clk_slow) then
+						 edge_det <= EOC_in & edge_det(2 downto 1);
+						 end if;
+        
+ end process eoc_edge_det;
+		  
+ eoc_rising_edge  <= edge_det(1 downto 0) = "10";
+ eoc_falling_edge <= edge_det(1 downto 0) = "01";
+
+	CLK_out <= clk_slow ;
+	leds <= da(1) ;
+	Start <= str;	
+	POT1_DATA <= da(0);
+	POT2_DATA <= da(1);
+	POT3_DATA <= da(2);
+	LDR_DATA  <= da(3);
+	
+	
+	
+end Behavioral;

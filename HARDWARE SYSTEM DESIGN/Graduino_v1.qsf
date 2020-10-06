@@ -1,0 +1,212 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# Date created = 13:30:06  May 23, 2020
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Graduino_v1_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C35F672C6
+set_global_assignment -name TOP_LEVEL_ENTITY Graduino_v1
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:30:06  MAY 23, 2020"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 672
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 6
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_T6 -to add_sdram[0]
+set_location_assignment PIN_V4 -to add_sdram[1]
+set_location_assignment PIN_V3 -to add_sdram[2]
+set_location_assignment PIN_W2 -to add_sdram[3]
+set_location_assignment PIN_W1 -to add_sdram[4]
+set_location_assignment PIN_U6 -to add_sdram[5]
+set_location_assignment PIN_U7 -to add_sdram[6]
+set_location_assignment PIN_U5 -to add_sdram[7]
+set_location_assignment PIN_W4 -to add_sdram[8]
+set_location_assignment PIN_W3 -to add_sdram[9]
+set_location_assignment PIN_Y1 -to add_sdram[10]
+set_location_assignment PIN_V5 -to add_sdram[11]
+set_location_assignment PIN_AE2 -to ba_sdram[0]
+set_location_assignment PIN_AE3 -to ba_sdram[1]
+set_location_assignment PIN_AB3 -to cas_sdram
+set_location_assignment PIN_AA6 -to cke_sdram
+set_location_assignment PIN_N2 -to clk_50MHZ
+set_location_assignment PIN_AA7 -to clk_sdram
+set_location_assignment PIN_AC3 -to cs_sdram
+set_location_assignment PIN_V6 -to dq_sdram[0]
+set_location_assignment PIN_AA2 -to dq_sdram[1]
+set_location_assignment PIN_AA1 -to dq_sdram[2]
+set_location_assignment PIN_Y3 -to dq_sdram[3]
+set_location_assignment PIN_Y4 -to dq_sdram[4]
+set_location_assignment PIN_R8 -to dq_sdram[5]
+set_location_assignment PIN_T8 -to dq_sdram[6]
+set_location_assignment PIN_V7 -to dq_sdram[7]
+set_location_assignment PIN_W6 -to dq_sdram[8]
+set_location_assignment PIN_AB2 -to dq_sdram[9]
+set_location_assignment PIN_AB1 -to dq_sdram[10]
+set_location_assignment PIN_AA4 -to dq_sdram[11]
+set_location_assignment PIN_AA3 -to dq_sdram[12]
+set_location_assignment PIN_AC2 -to dq_sdram[13]
+set_location_assignment PIN_AC1 -to dq_sdram[14]
+set_location_assignment PIN_AA5 -to dq_sdram[15]
+set_location_assignment PIN_AD2 -to dqm_sdram[0]
+set_location_assignment PIN_Y5 -to dqm_sdram[1]
+set_location_assignment PIN_AB4 -to ras_sdram
+set_location_assignment PIN_AF10 -to ssg[0]
+set_location_assignment PIN_AB12 -to ssg[1]
+set_location_assignment PIN_AC12 -to ssg[2]
+set_location_assignment PIN_AD11 -to ssg[3]
+set_location_assignment PIN_AE11 -to ssg[4]
+set_location_assignment PIN_V14 -to ssg[5]
+set_location_assignment PIN_V13 -to ssg[6]
+set_location_assignment PIN_V20 -to ssg[7]
+set_location_assignment PIN_V21 -to ssg[8]
+set_location_assignment PIN_W21 -to ssg[9]
+set_location_assignment PIN_Y22 -to ssg[10]
+set_location_assignment PIN_AA24 -to ssg[11]
+set_location_assignment PIN_AA23 -to ssg[12]
+set_location_assignment PIN_AB24 -to ssg[13]
+set_location_assignment PIN_AB23 -to ssg[14]
+set_location_assignment PIN_V22 -to ssg[15]
+set_location_assignment PIN_AC25 -to ssg[16]
+set_location_assignment PIN_AC26 -to ssg[17]
+set_location_assignment PIN_AB26 -to ssg[18]
+set_location_assignment PIN_AB25 -to ssg[19]
+set_location_assignment PIN_Y24 -to ssg[20]
+set_location_assignment PIN_Y23 -to ssg[21]
+set_location_assignment PIN_AA25 -to ssg[22]
+set_location_assignment PIN_AA26 -to ssg[23]
+set_location_assignment PIN_Y26 -to ssg[24]
+set_location_assignment PIN_Y25 -to ssg[25]
+set_location_assignment PIN_U22 -to ssg[26]
+set_location_assignment PIN_W24 -to ssg[27]
+set_location_assignment PIN_N25 -to swit[0]
+set_location_assignment PIN_N26 -to swit[1]
+set_location_assignment PIN_P25 -to swit[2]
+set_location_assignment PIN_AE14 -to swit[3]
+set_location_assignment PIN_AF14 -to swit[4]
+set_location_assignment PIN_AD13 -to swit[5]
+set_location_assignment PIN_AC13 -to swit[6]
+set_location_assignment PIN_C13 -to swit[7]
+set_location_assignment PIN_B13 -to swit[8]
+set_location_assignment PIN_A13 -to swit[9]
+set_location_assignment PIN_N1 -to swit[10]
+set_location_assignment PIN_P1 -to swit[11]
+set_location_assignment PIN_P2 -to swit[12]
+set_location_assignment PIN_T7 -to swit[13]
+set_location_assignment PIN_U3 -to swit[14]
+set_location_assignment PIN_U4 -to swit[15]
+set_location_assignment PIN_V1 -to swit[16]
+set_location_assignment PIN_V2 -to swit[17]
+set_location_assignment PIN_AD3 -to we_sdram
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_AE23 -to RLEDs[0]
+set_location_assignment PIN_AF23 -to RLEDs[1]
+set_location_assignment PIN_AB21 -to RLEDs[2]
+set_location_assignment PIN_AC22 -to RLEDs[3]
+set_location_assignment PIN_AD22 -to RLEDs[4]
+set_location_assignment PIN_AD23 -to RLEDs[5]
+set_location_assignment PIN_AD21 -to RLEDs[6]
+set_location_assignment PIN_AC21 -to RLEDs[7]
+set_location_assignment PIN_AE22 -to GLEDs[0]
+set_location_assignment PIN_AF22 -to GLEDs[1]
+set_location_assignment PIN_V18 -to GLEDs[3]
+set_location_assignment PIN_W19 -to GLEDs[2]
+set_global_assignment -name VHDL_FILE PWM.vhd
+set_global_assignment -name VHDL_FILE Irrigation_pump.vhd
+set_global_assignment -name VHDL_FILE Timer.vhd
+set_global_assignment -name VHDL_FILE Thermometer.vhd
+set_global_assignment -name VHDL_FILE stepper_motor.vhd
+set_global_assignment -name VHDL_FILE Roof.vhd
+set_global_assignment -name VHDL_FILE RisingEdge.vhd
+set_global_assignment -name VHDL_FILE Lights.vhd
+set_global_assignment -name VHDL_FILE Latchjj.vhd
+set_global_assignment -name VHDL_FILE Latch.vhd
+set_global_assignment -name BDF_FILE Graduino_v1.bdf
+set_global_assignment -name QSYS_FILE garduino_sys_v1.qsys
+set_global_assignment -name SOURCE_FILE garduino_sys_v1.cmp
+set_global_assignment -name VHDL_FILE Fan.vhd
+set_global_assignment -name VHDL_FILE DisplayDri_2.vhd
+set_global_assignment -name VHDL_FILE DHT11.vhd
+set_global_assignment -name VHDL_FILE Deserializer.vhd
+set_global_assignment -name VHDL_FILE DecimalCounter.vhd
+set_global_assignment -name VHDL_FILE Curtains.vhd
+set_global_assignment -name VHDL_FILE CounterM10.vhd
+set_global_assignment -name VHDL_FILE Counter.vhd
+set_global_assignment -name VHDL_FILE clock_divider.vhd
+set_global_assignment -name VHDL_FILE BinaryToDecimal.vhd
+set_global_assignment -name VHDL_FILE AnodeDecoder.vhd
+set_global_assignment -name VHDL_FILE ADC_C.vhd
+set_location_assignment PIN_U25 -to GPIO_1_23
+set_location_assignment PIN_U23 -to GPIO_1_24
+set_location_assignment PIN_R19 -to GPIO_1_26
+set_location_assignment PIN_T19 -to GPIO_1_27
+set_location_assignment PIN_W23 -to GPIO_1_28
+set_location_assignment PIN_W25 -to GPIO_1_29
+set_location_assignment PIN_V23 -to GPIO_1_30
+set_location_assignment PIN_V24 -to GPIO_1_31
+set_location_assignment PIN_V25 -to GPIO_1_32
+set_location_assignment PIN_V26 -to GPIO_1_33
+set_location_assignment PIN_U21 -to GPIO_1_34
+set_location_assignment PIN_U20 -to GPIO_1_35
+set_location_assignment PIN_U24 -to GPIO_1_25
+set_location_assignment PIN_M24 -to GPIO_1_0[8]
+set_location_assignment PIN_M25 -to GPIO_1_0[9]
+set_location_assignment PIN_K26 -to GPIO_1_01
+set_location_assignment PIN_M22 -to GPIO_1_02
+set_location_assignment PIN_M23 -to GPIO_1_03
+set_location_assignment PIN_M19 -to GPIO_1_04
+set_location_assignment PIN_M20 -to GPIO_1_05
+set_location_assignment PIN_N20 -to GPIO_1_06
+set_location_assignment PIN_M21 -to GPIO_1_07
+set_location_assignment PIN_N24 -to GPIO_1_10
+set_location_assignment PIN_P24 -to GPIO_1_11
+set_location_assignment PIN_R25 -to GPIO_1_12
+set_location_assignment PIN_R24 -to GPIO_1_13
+set_location_assignment PIN_R20 -to GPIO_1_14
+set_location_assignment PIN_T22 -to GPIO_1_15
+set_location_assignment PIN_T23 -to GPIO_1_16
+set_location_assignment PIN_T24 -to GPIO_1_17
+set_location_assignment PIN_T25 -to GPIO_1_18
+set_location_assignment PIN_K25 -to GPIO_1_00
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

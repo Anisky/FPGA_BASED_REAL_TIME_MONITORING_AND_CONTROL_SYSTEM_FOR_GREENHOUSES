@@ -1,0 +1,44 @@
+--=============================
+--  Roof unit
+--=============================
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+entity Roof is
+   port(
+      En         		: in std_logic;
+	   CLK         	: in std_logic;
+      state   		   : in std_logic;
+		direction      : in std_logic_vector(1 downto 0);
+      out_roof       : out std_logic_vector(3 downto 0)
+   );
+end Roof;
+
+architecture beha of Roof is
+Component PWM is 
+	port(
+	reset		: in std_logic;
+   clk		: in std_logic; 
+   w        : in std_logic_vector(7 downto 0);
+   pwm_pulse: out std_logic);
+end component;
+
+component stepper_motor is 
+	port (
+	  clk             :  in std_logic; 
+	  rst             :in std_logic;
+	  nbr_revolutions : in std_logic_vector (3 downto 0) ;
+	  clkwise :  in std_logic ;
+     out_stm :  out std_logic_vector(3 downto 0)
+	  );
+ end component ;  
+ 
+signal out_reg, out_ro : std_logic ;
+signal dire_reg : std_logic_vector(1 downto 0);
+begin
+   
+  U01 :  PWM           port map('0', CLK, 127,ou);
+  U02 :  stepper_motor port map(CLK, '0' , "001",direction,out_roof);
+  
+											
+end beha;

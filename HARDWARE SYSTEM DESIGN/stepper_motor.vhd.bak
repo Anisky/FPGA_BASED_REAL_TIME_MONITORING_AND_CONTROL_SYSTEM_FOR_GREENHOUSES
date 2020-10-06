@@ -1,0 +1,74 @@
+Library ieee;
+Use ieee.std_logic_1164.all;
+Use ieee.std_logic_unsigned.all;
+Use ieee.std_logic_arith.all;
+
+entity stepper_driver is
+     port (
+	  clk             :  in std_logic; 
+	  rst             :in std_logic;
+	  nbr_revolutions : in std_logic_vector (3 downto 0) ;
+     out_stm :  out std_logic_vector(3 downto 0)
+	  );
+	  
+end stepper_driver;
+
+architecture stm_st_b of stepper_driver is
+
+type  state_type is (s0,s1,s2,s3);
+signal state : state_type;
+signal div : st_logic_vector(20 downto 0);
+signal lk, clkwise,start : std_logic;
+signal revolution :  unsigned integer range 0 ot 16 := 0`;
+begin
+ process(clk,rst) -- clock divider
+ begin
+ 
+     if (rst='0') then
+         div<=(others=>'0');
+     elsif(clk'event and clk='1') then
+			div<=div+1;
+	  end if;
+	  
+  end process;
+  
+lk<=dic(15);
+process(lk,rst,clkwise)
+
+  begin
+		if(rst='1')then
+			state<=s0;
+		elsif lk'event and lk='1' then
+				if clkwise='0' then
+				    if(revolution < nbr_revolutions) then 
+							case state is
+								when s0=>state<=s1 ;
+								         revolution <= 0 ;
+								when s1=>state<=s2;
+								when s2=>state<=s3;
+								when s3=>state<=s0;
+								         revolution = revolution + 1 ;
+								when others=>null;
+							end case;
+					 end if ;
+				elsif( clkwise='1')then 
+				      case state is
+							when s0=>state<=s3;
+							         revolution <= 0 ;
+							when s3=>state<=s2;
+							when s2=>state<=s1;
+							when s1=>state<=s0;
+							     revolution = revolution + 1 ;
+							when others=>null;
+						end case
+				end if;
+				
+		end if;
+end process;
+
+with state select
+	out_stm<="0110" when s0,
+				"1010" when s1, 
+				"1001" when s2,
+				"0101" when s3;
+End stm_st_b;
