@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEAEA"
+    android:focusableInTouchMode="false"
+    android:orientation="vertical"
+    tools:context=".ui.ControlPanel.ControlPanelFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/borders_color"
+                android:backgroundTint="#FFFFFF"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+
+                <TextView
+                    android:id="@+id/tv_control_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/control_mode"
+                    android:textColor="@color/available_data_txt_cl"
+                    android:textSize="24sp" />
+
+                <RadioGroup
+                    android:id="@+id/control_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginStart="32dp"
+                    android:checkedButton="@id/radio_manual"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_manual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:checked="false"
+                        android:text="Manual"
+                        android:textStyle="italic" />
+
+                    <RadioButton
+                        android:id="@+id/radio_automatic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginStart="8dp"
+                        android:text="Automatic"
+                        android:textStyle="italic" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#dedede"
+                android:backgroundTint="@color/colorAccent" />
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:columnCount="6"
+                app:rowCount="3">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_air_conditioner"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="15dp"
+                    app:layout_column="0"
+                    app:layout_columnSpan="4"
+                    app:layout_columnWeight="4"
+                    app:layout_gravity="fill"
+                    app:layout_row="0"
+                    app:strokeColor="@color/colorAccent"
+                    app:strokeWidth="1dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/sw_air"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/automatic_air_layout"
+                            android:layout_width="167dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn_set_air"
+                                android:layout_width="64dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_vertical"
+                                android:backgroundTint="@android:color/white"
+                                android:text="@string/btn_set_value"
+                                android:textColor="@color/colorAccent"
+                                app:strokeColor="@color/colorAccent"
+                                app:strokeWidth="1dp" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/et_set_air"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="95dp"
+                                android:layout_height="57dp"
+                                android:layout_marginStart="8dp"
+                                android:background="@android:color/white"
+                                android:hint="@string/tv_set_point"
+                                app:hintTextColor="@color/colorAccent">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/et_air"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:backgroundTint="#00FFFFFF"
+                                    android:inputType="number"
+                                    android:textAlignment="center" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/manual_air_layout"
+                            android:layout_width="176dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginBottom="32dp"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/bnt_minus_air"
+                                android:layout_width="56dp"
+                                android:layout_height="wrap_content"
+
+                                android:backgroundTint="@android:color/white"
+                                app:icon="@drawable/ic_minus"
+                                app:iconPadding="0dp"
+                                app:iconTint="@color/colorAccent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:strokeColor="@color/colorAccent"
+                                app:strokeWidth="1dp" />
+
+                            <TextView
+                                android:id="@+id/tv_air_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:outlineProvider="none"
+                                android:text="53 C"
+                                android:textColor="@color/available_data_txt_cl"
+                                android:textSize="24sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/bnt_plus_air"
+                                app:layout_constraintStart_toEndOf="@+id/bnt_minus_air" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/bnt_plus_air"
+                                android:layout_width="56dp"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@android:color/white"
+                                app:icon="@drawable/ic_plus"
+                                app:iconPadding="0dp"
+                                app:iconTint="@color/colorAccent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:strokeColor="@color/colorAccent"
+                                app:strokeWidth="1dp" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/card_air_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/card_air_title"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/available_data_txt_cl"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="2dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="#dedede"
+                            android:backgroundTint="@color/colorAccent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/card_air_title" />
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="79dp"
+                            android:layout_height="59dp"
+                            android:layout_marginEnd="8dp"
+                            android:src="@drawable/ic_air_conditioner"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view"
+                            app:tint="@color/colorAccent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_lights"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="15dp"
+                    app:layout_column="4"
+                    app:layout_columnSpan="2"
+                    app:layout_columnWeight="2"
+                    app:layout_gravity="fill"
+                    app:layout_row="0"
+                    app:layout_rowSpan="2"
+                    app:strokeColor="@color/colorAccent"
+                    app:strokeWidth="1dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/manual_lights_layout"
+                            android:layout_width="137dp"
+                            android:layout_height="185dp"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/im_lamp">
+
+                            <SeekBar
+                                android:id="@+id/sb_lights"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:max="100"
+                                android:progress="50"
+                                android:rotation="270"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_lights_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="32dp"
+                                android:text="50"
+                                android:textSize="24sp"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/sw_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/automatic_lights_layout"
+                            android:layout_width="90dp"
+                            android:layout_height="119dp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/im_lamp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/et_set_light"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="90dp"
+                                android:layout_height="55dp">
+
+                                android:layout_marginBottom="8dp"
+                                android:background="@android:color/white"
+                                android:hint="@string/tv_set_point"
+                                android:visibility="visible">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/ed_setp_lights"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="#00FFFFFF"
+                                    android:inputType="number"
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn_set_lights"
+                                android:layout_width="64dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="16dp"
+                                android:backgroundTint="@android:color/white"
+                                android:text="@string/btn_set_value"
+                                android:textColor="@color/colorAccent"
+                                android:visibility="visible"
+                                app:strokeColor="@color/colorAccent"
+                                app:strokeWidth="1dp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/im_lamp"
+                            android:layout_width="60dp"
+                            android:layout_height="73dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/ic_lamp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view2"
+                            app:tint="@color/colorAccent" />
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="2dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="#dedede"
+                            android:backgroundTint="@color/colorAccent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/card_lights_title" />
+
+                        <TextView
+                            android:id="@+id/card_lights_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/card_lights_title"
+                            android:textAlignment="center"
+                            android:textColor="@color/available_data_txt_cl"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_curtains"
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="15dp"
+                    app:layout_column="3"
+                    app:layout_columnSpan="3"
+                    app:layout_columnWeight="3"
+                    app:layout_gravity="fill"
+                    app:layout_row="2">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/curtain_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/ic_curtains"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view_curtains">
+
+                            <TextView
+                                android:id="@+id/tv_curtain_closed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:text="@string/curtains_closed"
+                                android:textAlignment="textEnd"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toTopOf="@+id/sb_curtains"
+                                app:layout_constraintEnd_toEndOf="@+id/sb_curtains" />
+
+                            <TextView
+                                android:id="@+id/tv_curtain_open"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:gravity="start"
+                                android:text="@string/curtains_open"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toTopOf="@+id/sb_curtains"
+                                app:layout_constraintStart_toStartOf="@+id/sb_curtains" />
+
+                            <TextView
+                                android:id="@+id/tv_curtain_h_open"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/curtains_half_open"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toTopOf="@+id/sb_curtains"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <SeekBar
+                                android:id="@+id/sb_curtains"
+                                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                                android:layout_width="130dp"
+                                android:layout_height="32dp"
+                                android:max="2"
+                                android:progress="1"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <ImageView
+                            android:id="@+id/ic_curtains"
+                            android:layout_width="68dp"
+                            android:layout_height="61dp"
+                            android:layout_marginEnd="8dp"
+                            android:src="@drawable/ic_curtains"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view_curtains"
+                            app:tint="@color/colorAccent" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/sw_curtains"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:visibility="visible"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:id="@+id/view_curtains"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="#dedede"
+                            android:backgroundTint="@color/colorAccent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/card_curtains_title" />
+
+                        <TextView
+                            android:id="@+id/card_curtains_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/card_curtains_title"
+                            android:textColor="@color/available_data_txt_cl"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_roof"
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="15dp"
+                    app:layout_column="0"
+                    app:layout_columnSpan="3"
+                    app:layout_columnWeight="3"
+                    app:layout_gravity="fill"
+                    app:layout_row="2"
+                    app:strokeColor="@color/colorAccent"
+                    app:strokeWidth="1dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/sw_roof_co"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:checked="true"
+                            android:textOff="@string/roof_open"
+                            android:textOn="@string/roof_closed"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/imageView"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view_roof" />
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="79dp"
+                            android:layout_height="59dp"
+                            android:layout_marginEnd="8dp"
+                            android:src="@drawable/ic_roof"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view_roof"
+                            app:tint="@color/colorAccent" />
+
+                        <View
+                            android:id="@+id/view_roof"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="2dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="#dedede"
+                            android:backgroundTint="@color/colorAccent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/card_roof_title" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/sw_roof"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:checked="true"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/card_roof_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/card_roof_title"
+                            android:textColor="@color/available_data_txt_cl"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_irrigation"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="15dp"
+                    app:layout_column="0"
+                    app:layout_columnSpan="4"
+                    app:layout_columnWeight="4"
+                    app:layout_gravity="fill"
+                    app:layout_row="1"
+                    app:strokeColor="@color/colorAccent"
+                    app:strokeWidth="1dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/manual_irr_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/ic_irr"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view_irr">
+
+                            <TextView
+                                android:id="@+id/tv_irr_med"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/irr_medium"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toTopOf="@+id/sb_irr"
+                                app:layout_constraintStart_toEndOf="@+id/tv_irr_light" />
+
+                            <TextView
+                                android:id="@+id/tv_irr_light"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:gravity="start"
+                                android:text="@string/irr_light"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toTopOf="@+id/sb_irr"
+                                app:layout_constraintStart_toStartOf="@+id/sb_irr" />
+
+                            <SeekBar
+                                android:id="@+id/sb_irr"
+                                android:layout_width="176dp"
+                                android:layout_height="38dp"
+                                android:max="2"
+                                android:progress="1"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_irr_intensive"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/irr_intensive"
+                                android:textAlignment="textEnd"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toTopOf="@+id/sb_irr"
+                                app:layout_constraintEnd_toEndOf="@+id/sb_irr" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/sw_irr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/automatic_irr_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/ic_irr"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view_irr">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn_set_irr"
+                                android:layout_width="64dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="8dp"
+                                android:backgroundTint="@android:color/white"
+                                android:text="@string/btn_set_value"
+                                android:textColor="@color/colorAccent"
+                                android:visibility="visible"
+                                app:strokeColor="@color/colorAccent"
+                                app:strokeWidth="1dp" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/et_set_irr"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="90dp"
+                                android:layout_height="55dp"
+                                android:layout_gravity="center_vertical">
+
+                                android:layout_marginBottom="8dp"
+                                android:background="@android:color/white"
+                                android:hint="@string/tv_set_point"
+                                android:visibility="visible">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/ed_setp_irr"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="#00FFFFFF"
+                                    android:hint="@string/tv_set_point"
+                                    android:inputType="number"
+                                    android:visibility="visible" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/ic_irr"
+                            android:layout_width="79dp"
+                            android:layout_height="59dp"
+                            android:layout_marginEnd="8dp"
+                            android:src="@drawable/ic_sprinkler"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view_irr"
+                            app:tint="@color/colorAccent" />
+
+                        <TextView
+                            android:id="@+id/card_irr_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/card_irrigation_title"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/available_data_txt_cl"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:id="@+id/view_irr"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="2dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="#dedede"
+                            android:backgroundTint="@color/colorAccent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/card_irr_title" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.gridlayout.widget.GridLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bt_set_commands"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/set_commands" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

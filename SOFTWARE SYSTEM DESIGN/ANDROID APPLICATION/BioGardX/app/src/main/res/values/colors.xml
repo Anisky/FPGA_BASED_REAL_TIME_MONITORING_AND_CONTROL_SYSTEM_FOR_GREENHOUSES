@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#558b2f</color>
+    <color name="colorPrimaryLight">#652f8b</color>
+    <color name="colorPrimaryDark">#33691e</color>
+    <color name="colorAccent">#9ccc65</color>
+    <color name="colorLogIn">#053A07</color>
+
+    <color name="temp_ic_tint">#FF8705</color>
+    <color name="hum_ic_tint">#18FFFF</color>
+    <color name="soil_ic_tint">#975708</color>
+    <color name="rain_ic_tint">#3E4143</color>
+    <color name="sun_ic_tint">#FFDF37</color>
+    <color name="co2_ic_tint">#252424</color>
+    <color name="ph_ic_tint">#304FFE</color>
+    <color name="water_ic_tint">#00000000</color>
+
+    <color name="available_data_bg">#FAFAFA</color>
+    <color name="available_data_txt_cl">@android:color/primary_text_light_nodisable</color>
+    <color name="unavailable_data_bg">#D85151</color>
+    <color name="unavailable_data_txt_cl">@android:color/primary_text_dark</color>
+
+    <color name="actuator_enabled_Bg">@android:color/white</color>
+    <color name="actuator_disabled_Bg">#eaeaea</color>
+
+    <color name="snackbar_bg_color">#534B4B</color>
+    <color name="snackbar_tx_color">@color/colorAccent</color>
+    <color name="snackbar_outline_color">@color/colorAccent</color>
+
+    <color name="connected_color">@color/colorPrimaryLight</color>
+    <color name="not_connected_color">#DC0A28</color>
+
+
+
+</resources>

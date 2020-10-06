@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "739376699146",
+    "firebase_url": "https://biogardx.firebaseio.com",
+    "project_id": "biogardx",
+    "storage_bucket": "biogardx.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739376699146:android:01c29f9bd36318fef84cf3",
+        "android_client_info": {
+          "package_name": "com.biogardxcompany.biogardx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "739376699146-89gnq18dp6p0pujds4ktjfibp5nn3i70.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.biogardxcompany.biogardx",
+            "certificate_hash": "22e8c6141451b913b085e87f7aff50b5e2b1148b"
+          }
+        },
+        {
+          "client_id": "739376699146-j042kgb3ckrpo472un5bgd0rdtqgj3t7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0kfsfRFgUByvj0L69CDFHX2DIignR_RA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "739376699146-j042kgb3ckrpo472un5bgd0rdtqgj3t7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

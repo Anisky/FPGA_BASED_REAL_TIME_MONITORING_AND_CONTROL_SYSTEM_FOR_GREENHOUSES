@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_conncet"
+        android:orderInCategory="100"
+        android:title="@string/connect_to_bt_device"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_state"
+        android:icon="@drawable/ic_bluetooth_disabled_24px"
+        android:orderInCategory="100"
+        android:title="state"
+        app:showAsAction="always|never" />
+</menu>
